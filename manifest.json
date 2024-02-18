@@ -1,0 +1,28 @@
+{
+  "name": "Domain Age Checker",
+  "version": "1.0.0",
+  "description": "Get age of domain name",
+  "manifest_version": 3,
+  "permissions": ["tabs"],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Domain Age Checker",
+    "default_icon": {
+      "16": "icons/favicon16.png",
+      "32": "icons/favicon32.png"
+    }
+  },
+  "icons": {
+    "16": "icons/favicon16.png",
+    "32": "icons/favicon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": ["https://accessible-ninth-countess.glitch.me/whois"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["app.js"]
+    }
+  ]
+}
